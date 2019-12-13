@@ -1,0 +1,33 @@
+<div class="row" *ngIf="details">
+    <div class="col-6">
+
+        <img [src]="details?.avatar" alt="">
+    </div>
+    <div class="col-6">
+        <h1>{{details.name}}</h1>
+        <h3><b>Price:</b>{{details.price | currency}}</h3>
+        <form action="" [formGroup]="detailform" (ngSubmit)="addCart()">
+            <div class="form-group">
+                <label for="">Size</label>
+                <select name="" id="" class="form-control" formControlName='size'
+                    [ngStyle]="{'text-transform':'capitalize'}">
+                    <option *ngFor="let size of sizes" [value]="size" [ngStyle]="{'text-transform':'capitalize'}">
+                        {{size}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="">Quantity</label>
+                <input type="text" class="form-control" formControlName='quanity'>
+                <p></p>
+            </div>
+            <!-- ==={{detailform.get('size') | json}} -->
+            <!-- ========== {{formcontrollist.quanity.errors | json }} ============ -->
+            <!-- {{detailform.valid}} -->
+            <div class="col-12"> <button class="btn btn-primary" [disabled]="detailform.invalid">Add to Cart</button>
+            </div>
+        </form>
+    </div>
+
+
+
+</div>

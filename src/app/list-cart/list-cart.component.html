@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4 shop_item mx-auto text-center" (click)="detail_navigation(item.id)" *ngFor="let item of listItem">          
+            <img class="avatar_img text-center" [src]="item.avatar">
+            <p class="text-center">{{item.name}}</p>
+            <p class="text-center">{{item.price | currency:'&#8377;'}}</p>
+        </div>
+      
+    </div>
+</div>
+<!-- <h1>{{currentParamval}}</h1> -->

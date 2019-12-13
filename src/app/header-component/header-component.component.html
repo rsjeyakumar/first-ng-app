@@ -1,0 +1,24 @@
+<header>
+  <h1 class="text-center">Shopping cart <img src="../../assets/icons/cart.png" class="cart_icon" routerLink="cart"
+      alt=""><span class="numberCircle">{{cartLength?.length}}</span></h1>
+  <ul class="nav justify-content-center">
+    <li class="nav-item" *ngFor="let shopCategry of shopCategrys">
+      <a class="nav-link active" href="javascript:void(0)" (click)="naviage(shopCategry.id)">{{shopCategry.title}}</a>
+    </li>
+    <!-- <li>
+        <input type="text" #catval (keydown.enter)=addcat(catval.value)>
+    </li> -->
+
+    <!-- <li class="nav-item">
+      <a class="nav-link" [routerLink]="'list'" [queryParams]="{id:2}">Women</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="'list'" [queryParams]="{id:3}">Kids</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled"  tabindex="-1" aria-disabled="true" [routerLink]="'list'" [queryParams]="{id:4}">Toys</a>
+    </li> -->
+
+  </ul>
+
+</header>

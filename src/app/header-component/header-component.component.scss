@@ -1,0 +1,18 @@
+header {
+  background-color: #eaeaea;
+  margin-bottom: 20px;
+  .cart_icon {
+    width: 35px;
+  }
+  .numberCircle {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 4px;
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+    font: 21px Arial, sans-serif;
+  }
+}
